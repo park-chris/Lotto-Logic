@@ -1,5 +1,6 @@
 package com.crystal.finalproject_logictest_211226
 
+import android.content.Intent
 import android.database.DatabaseUtils
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,20 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        binding.btnLottoSimulator.setOnClickListener {
+
+            val myIntent = Intent(mContext, LottoSimulatorActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
+        binding.btnNumberBaseBallGame.setOnClickListener {
+            val myIntent = Intent(mContext, NumberBaseballGameActivity::class.java)
+            startActivity(myIntent)
+
+        }
+
     }
 
     override fun setValues() {
